@@ -1,7 +1,56 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Code\\PRN232\\PRN232TestAPI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|d:\\code\\prn232\\prn232testapi\\prn232testapi\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|solutionrelative:prn232testapi\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|d:\\code\\prn232\\prn232testapi\\prn232testapi\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|solutionrelative:prn232testapi\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|d:\\code\\prn232\\prn232testapi\\prn232testapi\\services\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|solutionrelative:prn232testapi\\services\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|d:\\code\\prn232\\prn232testapi\\prn232testapi\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|solutionrelative:prn232testapi\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|d:\\code\\prn232\\prn232testapi\\prn232testapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|solutionrelative:prn232testapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|d:\\code\\prn232\\prn232testapi\\prn232testapi\\studentscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|solutionrelative:prn232testapi\\studentscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|d:\\code\\prn232\\prn232testapi\\prn232testapi\\dtos\\getstudentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|solutionrelative:prn232testapi\\dtos\\getstudentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|d:\\code\\prn232\\prn232testapi\\prn232testapi\\dtos\\getstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|solutionrelative:prn232testapi\\dtos\\getstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|d:\\code\\prn232\\prn232testapi\\prn232testapi\\dtos\\createnewstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|solutionrelative:prn232testapi\\dtos\\createnewstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|d:\\code\\prn232\\prn232testapi\\prn232testapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|solutionrelative:prn232testapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|d:\\code\\prn232\\prn232testapi\\prn232testapi\\prn232testapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|solutionrelative:prn232testapi\\prn232testapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|d:\\code\\prn232\\prn232testapi\\prn232testapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7E6A34F6-D476-4DF6-AD03-3EFF9C07E976}|PRN232TestAPI\\PRN232TestAPI.csproj|solutionrelative:prn232testapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 179,
           "Children": [
             {
               "$type": "Bookmark",
@@ -721,7 +770,167 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:41:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:36:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "PRN232TestAPI\\Controllers\\StudentController.cs",
+              "ToolTip": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "PRN232TestAPI\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAiwEEAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T16:53:17.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\Services\\StudentService.cs",
+              "RelativeDocumentMoniker": "PRN232TestAPI\\Services\\StudentService.cs",
+              "ToolTip": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\Services\\StudentService.cs",
+              "RelativeToolTip": "PRN232TestAPI\\Services\\StudentService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAYwDIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:41:39.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IStudentService.cs",
+              "DocumentMoniker": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\Services\\IStudentService.cs",
+              "RelativeDocumentMoniker": "PRN232TestAPI\\Services\\IStudentService.cs",
+              "ToolTip": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\Services\\IStudentService.cs",
+              "RelativeToolTip": "PRN232TestAPI\\Services\\IStudentService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:41:24.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "PRN232TestAPI\\Models\\Student.cs",
+              "ToolTip": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\Models\\Student.cs",
+              "RelativeToolTip": "PRN232TestAPI\\Models\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:23:38.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetStudent.cs",
+              "DocumentMoniker": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\DTOs\\GetStudent.cs",
+              "RelativeDocumentMoniker": "PRN232TestAPI\\DTOs\\GetStudent.cs",
+              "ToolTip": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\DTOs\\GetStudent.cs",
+              "RelativeToolTip": "PRN232TestAPI\\DTOs\\GetStudent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T14:53:05.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentsContext.cs",
+              "DocumentMoniker": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\StudentsContext.cs",
+              "RelativeDocumentMoniker": "PRN232TestAPI\\StudentsContext.cs",
+              "ToolTip": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\StudentsContext.cs",
+              "RelativeToolTip": "PRN232TestAPI\\StudentsContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T14:53:50.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateNewStudent.cs",
+              "DocumentMoniker": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\DTOs\\CreateNewStudent.cs",
+              "RelativeDocumentMoniker": "PRN232TestAPI\\DTOs\\CreateNewStudent.cs",
+              "ToolTip": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\DTOs\\CreateNewStudent.cs",
+              "RelativeToolTip": "PRN232TestAPI\\DTOs\\CreateNewStudent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T14:53:44.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetStudentDetails.cs",
+              "DocumentMoniker": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\DTOs\\GetStudentDetails.cs",
+              "RelativeDocumentMoniker": "PRN232TestAPI\\DTOs\\GetStudentDetails.cs",
+              "ToolTip": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\DTOs\\GetStudentDetails.cs",
+              "RelativeToolTip": "PRN232TestAPI\\DTOs\\GetStudentDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T14:53:25.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\Program.cs",
+              "RelativeDocumentMoniker": "PRN232TestAPI\\Program.cs",
+              "ToolTip": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\Program.cs",
+              "RelativeToolTip": "PRN232TestAPI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:18:21.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "PRN232TestAPI\\appsettings.json",
+              "ToolTip": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\appsettings.json",
+              "RelativeToolTip": "PRN232TestAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-01T07:21:20.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PRN232TestAPI.http",
+              "DocumentMoniker": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\PRN232TestAPI.http",
+              "RelativeDocumentMoniker": "PRN232TestAPI\\PRN232TestAPI.http",
+              "ToolTip": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\PRN232TestAPI.http",
+              "RelativeToolTip": "PRN232TestAPI\\PRN232TestAPI.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-06-01T07:18:17.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\Dockerfile",
+              "RelativeDocumentMoniker": "PRN232TestAPI\\Dockerfile",
+              "ToolTip": "D:\\Code\\PRN232\\PRN232TestAPI\\PRN232TestAPI\\Dockerfile",
+              "RelativeToolTip": "PRN232TestAPI\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-01T07:03:24.589Z",
+              "EditorCaption": ""
             }
           ]
         },

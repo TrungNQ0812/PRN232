@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PRN232TestAPI.DTOs;
+using PRN232TestAPI.Models;
 
 namespace PRN232TestAPI.Services
 {
@@ -13,9 +14,22 @@ namespace PRN232TestAPI.Services
         {
             _studentsContext = studentsContext;
         }
-        public Task<ActionResult> createNewStudentAsync(CreateNewStudent student)
+        public async Task<ActionResult> createNewStudentAsync(CreateNewStudent student)
         {
-            throw new NotImplementedException();
+            var newStudent = new  Student
+            {
+                FirstName = student.FirstName,
+                LastName = student.LastName,
+                BirthDate = student.BirthDate,
+                Gender = student.Gender,
+                Email = student.Email,
+                Phone = student.Phone
+            };
+
+            _studentsContext.Students.Add(newStudent);
+            await _studentsContext.SaveChangesAsync();
+        
+            return new OkObjectResult(new { message = "Student create successfully!" });
         }
 
         public Task<bool> deleteStudentAsync(int id)
@@ -42,9 +56,24 @@ namespace PRN232TestAPI.Services
             return getStudent;
         }
 
-        public Task<bool> updateStudentAsync(int id, GetStudent student)
+        public async Task<bool> updateStudentAsync(int id, Student student)
         {
-            throw new NotImplementedException();
+            var existingStudent = await _studentsContext.Students.FindAsync(id);
+            if (existingStudent == null)
+            {
+                return false;
+            }
+
+            // Cập nhật thông tin từ DTO
+            existingStudent.FirstName = student.FirstName;
+            existingStudent.LastName = student.LastName;
+            existingStudent.BirthDate = student.BirthDate;
+            existingStudent.Gender = student.Gender;
+            existingStudent.Email = student.Email;
+            existingStudent.Phone = student.Phone;
+
+            await _studentsContext.SaveChangesAsync();
+            return true;
         }
     }
 }

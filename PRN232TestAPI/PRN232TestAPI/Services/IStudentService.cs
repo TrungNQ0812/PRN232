@@ -7,7 +7,7 @@ namespace PRN232TestAPI.Services
     public interface IStudentService
     {
         Task<ActionResult<GetStudent>> getStudentAsync(int id);
-        Task<bool> updateStudentAsync(int id,GetStudent student);
+        Task<bool> updateStudentAsync(int id,Student student);
         Task<bool> deleteStudentAsync(int id);
         Task<ActionResult> createNewStudentAsync(CreateNewStudent student);
     }
