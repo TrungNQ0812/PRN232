@@ -1,0 +1,25 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+out/
+*.exe
+*.dll
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Entity Framework
+Migrations/
+
+# ASP.NET
+appsettings.*.json
+
+# Visual Studio
+.vs/

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PRN232TestAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fbd3ed86f861851ad08c7e0e340b3c9b47c5f49")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f6066d6c969233db46827ef17ea0e692ea4391e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PRN232TestAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PRN232TestAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

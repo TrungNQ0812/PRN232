@@ -1,0 +1,6 @@
+@PRN232_PT1_TrungNQHE172565_HostAddress = http://localhost:5079
+
+GET {{PRN232_PT1_TrungNQHE172565_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
