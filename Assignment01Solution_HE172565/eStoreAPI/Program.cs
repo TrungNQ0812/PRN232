@@ -1,5 +1,7 @@
 using DataAccess;
 using Microsoft.EntityFrameworkCore;
+using DataAccess.Repositories;
+using DataAccess.DAOs;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,10 @@ builder.Services.AddScoped<IMemberRepository, MemberRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
+builder.Services.AddScoped<MemberDAO>();
+builder.Services.AddScoped<OrderDAO>();
+builder.Services.AddScoped<ProductDAO>();
+builder.Services.AddScoped<OrderDetailDAO>();
 
 
 //Register DbContext

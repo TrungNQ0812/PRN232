@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repositories
 {
-    internal interface IOrderDetailRepository
+    public interface IOrderDetailRepository
     {
-        Task GetAllOrderDetailAsync();
+        Task<List<OrderDetail>> GetAllOrderDetailsAsync();
+        Task<OrderDetail> GetOrderDetailByIdAsync(int orderDetailId);
+        Task<bool> AddOrderDetailAsync(OrderDetail orderDetail);
+        Task<bool> UpdateOrderDetailAsync(OrderDetail orderDetail);
+        Task<bool> DeleteOrderDetailAsync(int orderDetailId);
     }
 }

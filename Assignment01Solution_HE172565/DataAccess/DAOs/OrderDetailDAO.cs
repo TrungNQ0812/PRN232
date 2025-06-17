@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace DataAccess.DAOs
 {
-    internal class OrderDetailDAO
+    public class OrderDetailDAO
     {
+        private readonly eStoreDbContext _dbContext;
+
+        public OrderDetailDAO(eStoreDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
+
+
     }
 }
