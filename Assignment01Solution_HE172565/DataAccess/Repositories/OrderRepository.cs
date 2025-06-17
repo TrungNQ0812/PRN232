@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using DataAccess.DAOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +10,36 @@ namespace DataAccess.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
-        public Task<bool> AddOrderAsync(Order order)
+        private readonly OrderDAO _orderDAO;
+
+        public OrderRepository(OrderDAO orderDAO)
         {
-            throw new NotImplementedException();
+            _orderDAO = orderDAO;
         }
 
-        public Task<bool> DeleteOrderAsync(int orderId)
+        public async Task<List<Order>> GetAllOrdersAsync()
         {
-            throw new NotImplementedException();
+            return await _orderDAO.GetAllOrdersAsync();
         }
 
-        public Task<List<Order>> GetAllOrdersAsync()
+        public async Task<Order> GetOrderByIdAsync(int orderId)
         {
-            throw new NotImplementedException();
+            return await _orderDAO.GetOrderByIdAsync(orderId);
         }
 
-        public Task<Order> GetOrderByIdAsync(int orderId)
+        public async Task<bool> AddOrderAsync(Order order)
         {
-            throw new NotImplementedException();
+            return await _orderDAO.AddOrderAsync(order);
         }
 
-        public Task<bool> UpdateOrderAsync(Order order)
+        public async Task<bool> UpdateOrderAsync(Order order)
         {
-            throw new NotImplementedException();
+            return await _orderDAO.UpdateOrderAsync(order);
+        }
+
+        public async Task<bool> DeleteOrderAsync(int orderId)
+        {
+            return await _orderDAO.DeleteOrderAsync(orderId);
         }
     }
 }

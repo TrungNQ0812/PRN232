@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using DataAccess.DAOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +10,48 @@ namespace DataAccess.Repositories
 {
     public class MemberRepository : IMemberRepository
     {
-        public Task<bool> AddMemberAsync(Member member)
+        private readonly MemberDAO _memberDAO;
+
+        // Constructor to inject the MemberDAO
+        public MemberRepository(MemberDAO memberDAO)
         {
-            throw new NotImplementedException();
+            _memberDAO = memberDAO;
         }
 
-        public Task<bool> DeleteMemberAsync(Member member)
+        // Check if a member already exists by email
+        public async Task<bool> CheckDuplicateMemberAsync(string email)
         {
-            throw new NotImplementedException();
+            return await _memberDAO.CheckDuplicateMemberAsync(email);
         }
 
-        public Task<List<Member>> GetAllMembersAsync()
+        // Get a member by email
+        public async Task<Member> GetMemberByEmailAsync(string email)
         {
-            throw new NotImplementedException();
+            return await _memberDAO.GetMemberByEmailAsync(email);
         }
 
-        public Task<Member> GetMemberbyEmailAsync(string email)
+        // Get all members
+        public async Task<List<Member>> GetAllMembersAsync()
         {
-            throw new NotImplementedException();
+            return await _memberDAO.GetAllMembersAsync();
         }
 
-        public Task<bool> UpdateMemberAsync(Member member)
+        // Add a new member
+        public async Task<bool> AddMemberAsync(Member member)
         {
-            throw new NotImplementedException();
+            return await _memberDAO.AddMemberAsync(member);
+        }
+
+        // Update an existing member
+        public async Task<bool> UpdateMemberAsync(Member member)
+        {
+            return await _memberDAO.UpdateMemberAsync(member);
+        }
+
+        // Delete a member by ID
+        public async Task<bool> DeleteMemberAsync(int memberId)
+        {
+            return await _memberDAO.DeleteMemberAsync(memberId);
         }
     }
 }

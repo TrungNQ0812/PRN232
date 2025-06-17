@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using DataAccess.DAOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +10,36 @@ namespace DataAccess.Repositories
 {
     public class OrderDetailRepository : IOrderDetailRepository
     {
-        public Task<bool> AddOrderDetailAsync(OrderDetail orderDetail)
+        private readonly OrderDetailDAO _orderDetailDAO;
+
+        public OrderDetailRepository(OrderDetailDAO orderDetailDAO)
         {
-            throw new NotImplementedException();
+            _orderDetailDAO = orderDetailDAO;
         }
 
-        public Task<bool> DeleteOrderDetailAsync(int orderDetailId)
+        public async Task<List<OrderDetail>> GetAllOrderDetailsAsync()
         {
-            throw new NotImplementedException();
+            return await _orderDetailDAO.GetAllOrderDetailsAsync();
         }
 
-        public Task<List<OrderDetail>> GetAllOrderDetailsAsync()
+        public async Task<OrderDetail> GetOrderDetailByIdAsync(int orderDetailId)
         {
-            throw new NotImplementedException();
+            return await _orderDetailDAO.GetOrderDetailByIdAsync(orderDetailId);
         }
 
-        public Task<OrderDetail> GetOrderDetailByIdAsync(int orderDetailId)
+        public async Task<bool> AddOrderDetailAsync(OrderDetail orderDetail)
         {
-            throw new NotImplementedException();
+            return await _orderDetailDAO.AddOrderDetailAsync(orderDetail);
         }
 
-        public Task<bool> UpdateOrderDetailAsync(OrderDetail orderDetail)
+        public async Task<bool> UpdateOrderDetailAsync(OrderDetail orderDetail)
         {
-            throw new NotImplementedException();
+            return await _orderDetailDAO.UpdateOrderDetailAsync(orderDetail);
+        }
+
+        public async Task<bool> DeleteOrderDetailAsync(int orderDetailId)
+        {
+            return await _orderDetailDAO.DeleteOrderDetailAsync(orderDetailId);
         }
     }
 }

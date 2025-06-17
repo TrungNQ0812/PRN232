@@ -9,10 +9,11 @@ namespace DataAccess.Repositories
 {
     public interface IMemberRepository
     {
-        Task<Member> GetMemberbyEmailAsync(string email);
+        Task<bool> CheckDuplicateMemberAsync(string email);
+        Task<Member> GetMemberByEmailAsync(string email);
         Task<List<Member>> GetAllMembersAsync();
         Task<bool> AddMemberAsync(Member member);
         Task<bool> UpdateMemberAsync(Member member);
-        Task<bool> DeleteMemberAsync(Member member);
+        Task<bool> DeleteMemberAsync(int memberId);
     }
 }

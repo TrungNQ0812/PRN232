@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using DataAccess.DAOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +10,36 @@ namespace DataAccess.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        public Task<bool> AddProductAsync(Product product)
+        private readonly ProductDAO _productDAO;
+
+        public ProductRepository(ProductDAO productDAO)
         {
-            throw new NotImplementedException();
+            _productDAO = productDAO;
         }
 
-        public Task<bool> DeleteProductAsync(int productId)
+        public async Task<List<Product>> GetAllProductsAsync()
         {
-            throw new NotImplementedException();
+            return await _productDAO.GetAllProductsAsync();
         }
 
-        public Task<List<Product>> GetAllProductsAsync()
+        public async Task<Product> GetProductByIdAsync(int productId)
         {
-            throw new NotImplementedException();
+            return await _productDAO.GetProductByIdAsync(productId);
         }
 
-        public Task<Product> GetProductByIdAsync(int productId)
+        public async Task<bool> AddProductAsync(Product product)
         {
-            throw new NotImplementedException();
+            return await _productDAO.AddProductAsync(product);
         }
 
-        public Task<bool> UpdateProductAsync(Product product)
+        public async Task<bool> UpdateProductAsync(Product product)
         {
-            throw new NotImplementedException();
+            return await _productDAO.UpdateProductAsync(product);
+        }
+
+        public async Task<bool> DeleteProductAsync(int productId)
+        {
+            return await _productDAO.DeleteProductAsync(productId);
         }
     }
 }
