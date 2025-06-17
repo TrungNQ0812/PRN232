@@ -9,6 +9,7 @@ namespace DataAccess.Repositories
 {
     public interface IProductRepository
     {
+
         Task<List<Product>> GetAllProductsAsync();
         Task<Product> GetProductByIdAsync(int productId);
         Task<bool> AddProductAsync(Product product);

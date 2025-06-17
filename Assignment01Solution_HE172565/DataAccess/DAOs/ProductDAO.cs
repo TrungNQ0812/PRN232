@@ -28,7 +28,7 @@ namespace DataAccess.DAOs
         public async Task<Product> GetProductByIdAsync(int productId)
         {
             return await _dbContext.Products
-                .FirstOrDefaultAsync(p => p.Id == productId);
+                .FirstOrDefaultAsync(p => p.ProductId == productId);
         }
 
         // Add a new product

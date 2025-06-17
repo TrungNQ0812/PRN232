@@ -32,7 +32,7 @@ namespace DataAccess.DAOs
             return await _dbContext.OrderDetails
                 .Include(od => od.Product)
                 .Include(od => od.Order)
-                .FirstOrDefaultAsync(od => od.Id == orderDetailId);
+                .FirstOrDefaultAsync(od => od.OrderId == orderDetailId);
         }
 
         // Add a new order detail
