@@ -1,0 +1,50 @@
+﻿@page
+@model eStoreClient.Pages.Products.IndexModel
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1 style="text-align: center; color: #333; font-size: 28px;">
+    Product List
+</h1>
+
+<hr />
+
+<a asp-page="/Products/Create" style="text-decoration: none; background-color: #28a745; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold;">
+    Create Product
+</a>
+<!-- Display all products -->
+<table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+    <thead style="background-color: #007bff; color: white; border-radius: 5px;">
+        <tr>
+            <th style="padding: 12px 15px; text-align: left;">ID</th>
+            <th style="padding: 12px 15px; text-align: left;">Name</th>
+            <th style="padding: 12px 15px; text-align: left;">Unit Price</th>
+            <th style="padding: 12px 15px; text-align: left;">Category</th>
+            <th style="padding: 12px 15px; text-align: left;">Stock</th>
+            <th style="padding: 12px 15px; text-align: left;">Weight</th>
+            <th style="padding: 12px 15px; text-align: left;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 12px 15px; font-size: 16px;">@product.ProductId</td>
+                <td style="padding: 12px 15px; font-size: 16px;">@product.ProductName</td>
+                <td style="padding: 12px 15px; font-size: 16px;">@product.UnitPrice</td>
+                <td style="padding: 12px 15px; font-size: 16px;">@product.CategoryId</td>
+                <td style="padding: 12px 15px; font-size: 16px;">@product.UnitsInStock</td>
+                <td style="padding: 12px 15px; font-size: 16px;">@product.Weight</td>
+                <td style="padding: 12px 15px; font-size: 16px;">
+                    <a asp-page="/Products/Edit" asp-route-id="@product.ProductId" style="text-decoration: none; color: #007bff; font-weight: bold;">
+                        Edit
+                    </a>
+                    <a asp-page="/Products/Delete" asp-route-id="@product.ProductId" style="text-decoration: none; color: #d9534f; font-weight: bold;">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

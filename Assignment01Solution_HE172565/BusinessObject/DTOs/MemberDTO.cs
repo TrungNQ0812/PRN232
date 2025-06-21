@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace BusinessObject
+namespace BusinessObject.DTOs
 {
-    public class Member
+    public class MemberDTO
     {
         public int MemberId { get; set; }
         public string Email { get; set; }
@@ -15,9 +14,5 @@ namespace BusinessObject
         public string City { get; set; }
         public string Country { get; set; }
         public string Password { get; set; }
-
-        //[JsonIgnore]
-        public ICollection<Order> Orders { get; set; }
     }
-
 }

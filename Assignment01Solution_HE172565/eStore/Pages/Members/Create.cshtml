@@ -1,0 +1,71 @@
+﻿@page
+@model eStoreClient.Pages.Members.CreateModel
+@{
+    ViewData["Title"] = "Create Member";
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div style="color:red;">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div>@error.ErrorMessage</div>
+        }
+    </div>
+}
+
+<h1 style="text-align: center; font-size: 28px; color: #333;">Create Member</h1>
+
+<form method="post" style="max-width: 500px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
+    <div style="margin-bottom: 20px;">
+        <label asp-for="Member.Email" style="display: block; font-weight: 600; color: #444;">Email</label>
+        <input asp-for="Member.Email" class="form-input" required />
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label asp-for="Member.CompanyName" style="display: block; font-weight: 600; color: #444;">Company Name</label>
+        <input asp-for="Member.CompanyName" class="form-input" required />
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label asp-for="Member.City" style="display: block; font-weight: 600; color: #444;">City</label>
+        <input asp-for="Member.City" class="form-input" required />
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label asp-for="Member.Country" style="display: block; font-weight: 600; color: #444;">Country</label>
+        <input asp-for="Member.Country" class="form-input" required />
+    </div>
+
+    <div style="margin-bottom: 25px;">
+        <label asp-for="Member.Password" style="display: block; font-weight: 600; color: #444;">Password</label>
+        <input asp-for="Member.Password" type="password" class="form-input" required />
+    </div>
+
+    <div style="display: flex; justify-content: space-between;">
+        <button type="submit" style="background-color: Green; color: white; padding: 10px 20px; font-weight: bold; border: none; border-radius: 5px; cursor: pointer;">
+            Create
+        </button>
+        <a asp-page="Index" style="background-color: Red; color: white; padding: 10px 20px; font-weight: bold; border-radius: 5px; text-decoration: none;">
+            Back to List
+        </a>
+    </div>
+</form>
+
+<style>
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+        }
+</style>
+

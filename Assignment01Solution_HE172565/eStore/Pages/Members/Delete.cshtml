@@ -1,0 +1,20 @@
+﻿@page
+@model eStoreClient.Pages.Members.DeleteModel
+@{
+    ViewData["Title"] = "Delete Member";
+}
+
+<h2>Delete Member</h2>
+<h3>Are you sure you want to delete this member?</h3>
+
+<div>
+    <strong>@Model.MemberToDelete.Email</strong> - @Model.MemberToDelete.CompanyName
+</div>
+
+<form method="post">
+    <input asp-for="MemberToDelete.MemberId" type="hidden" />
+    <button type="submit" style="text-decoration: none; background-color: #28a745; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold;">Confirm Delete</button>
+    <a asp-page="/Members/Index" style="text-decoration: none; background-color:#FF0000; color: white; padding: 8px 15px; border-radius: 5px; font-weight: bold;">
+        Cancel
+    </a>
+</form>

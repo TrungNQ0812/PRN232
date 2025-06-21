@@ -35,29 +35,49 @@ namespace DataAccess
             modelBuilder.Entity<OrderDetail>()
                 .HasKey(od => new { od.OrderId, od.ProductId });
 
-            // Product → Category (Nhiều Sản phẩm thuộc 1 Danh mục)
+            // Product → Category
             modelBuilder.Entity<Product>()
                 .HasOne(p => p.Category)
                 .WithMany(c => c.Products)
-                .HasForeignKey(p => p.CategoryId);
+                .HasForeignKey(p => p.CategoryId)
+                .OnDelete(DeleteBehavior.Restrict); 
 
-            // Order → Member (Nhiều đơn hàng của 1 thành viên)
+            // Order → Member 
             modelBuilder.Entity<Order>()
                 .HasOne(o => o.Member)
                 .WithMany(m => m.Orders)
-                .HasForeignKey(o => o.MemberId);
+                .HasForeignKey(o => o.MemberId)
+                .OnDelete(DeleteBehavior.Cascade); 
 
             // OrderDetail → Order
             modelBuilder.Entity<OrderDetail>()
                 .HasOne(od => od.Order)
                 .WithMany(o => o.OrderDetails)
-                .HasForeignKey(od => od.OrderId);
+                .HasForeignKey(od => od.OrderId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             // OrderDetail → Product
             modelBuilder.Entity<OrderDetail>()
                 .HasOne(od => od.Product)
                 .WithMany(p => p.OrderDetails)
                 .HasForeignKey(od => od.ProductId);
+            /*
+            // ✅ Optional navigation: avoid validation error when not included
+            modelBuilder.Entity<Member>()
+                .Navigation(m => m.Orders);
+
+            modelBuilder.Entity<Product>()
+                .Navigation(p => p.OrderDetails)
+                .IsRequired(false);
+
+            modelBuilder.Entity<Category>()
+                .Navigation(c => c.Products)
+                .IsRequired(false);
+
+            modelBuilder.Entity<Order>()
+                .Navigation(o => o.OrderDetails)
+                .IsRequired(false);
+            */
         }
     }
 }

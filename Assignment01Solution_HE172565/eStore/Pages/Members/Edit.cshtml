@@ -1,0 +1,62 @@
+﻿@page
+@model eStoreClient.Pages.Members.EditModel
+@{
+    ViewData["Title"] = "Edit Member";
+}
+
+<h1 style="text-align: center; font-size: 28px; color: #333;">Edit Member</h1>
+
+<form method="post" style="max-width: 500px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
+    <input asp-for="MemberToEdit.MemberId" type="hidden" />
+
+    <div style="margin-bottom: 20px;">
+        <label asp-for="MemberToEdit.Email" style="display: block; font-weight: 600; color: #444;">Email</label>
+        <input asp-for="MemberToEdit.Email" class="form-input" required />
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label asp-for="MemberToEdit.Password" style="display: block; font-weight: 600; color: #444;">Password</label>
+        <input asp-for="MemberToEdit.Password" type="password" class="form-input" required />
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label asp-for="MemberToEdit.CompanyName" style="display: block; font-weight: 600; color: #444;">Company Name</label>
+        <input asp-for="MemberToEdit.CompanyName" class="form-input" required />
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label asp-for="MemberToEdit.City" style="display: block; font-weight: 600; color: #444;">City</label>
+        <input asp-for="MemberToEdit.City" class="form-input" required />
+    </div>
+
+    <div style="margin-bottom: 25px;">
+        <label asp-for="MemberToEdit.Country" style="display: block; font-weight: 600; color: #444;">Country</label>
+        <input asp-for="MemberToEdit.Country" class="form-input" required />
+    </div>
+
+    <div style="display: flex; justify-content: space-between;">
+        <button type="submit" style="background-color: #007bff; color: white; padding: 10px 20px; font-weight: bold; border: none; border-radius: 5px; cursor: pointer;">
+            Update
+        </button>
+        <a asp-page="Index" style="background-color: #6c757d; color: white; padding: 10px 20px; font-weight: bold; border-radius: 5px; text-decoration: none;">
+            Back to List
+        </a>
+    </div>
+</form>
+
+<style>
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+        }
+</style>

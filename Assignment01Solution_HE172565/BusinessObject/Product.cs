@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace BusinessObject
@@ -16,7 +17,9 @@ namespace BusinessObject
         public decimal UnitsInStock { get; set; }
 
         //Navigation 
-        public ICollection<OrderDetail> OrderDetails { get; set; }
+        [JsonIgnore]
+        public ICollection<OrderDetail>? OrderDetails { get; set; }
+        [JsonIgnore]
         public Category Category { get; set; }
     }
 

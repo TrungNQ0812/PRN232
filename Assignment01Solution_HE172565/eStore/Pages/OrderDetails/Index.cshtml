@@ -1,0 +1,39 @@
+﻿@page
+@model eStoreClient.Pages.OrderDetails.IndexModel
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<!-- Display all order details -->
+<table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+    <thead style="background-color: #007bff; color: white;">
+        <tr>
+            <th style="padding: 12px 15px; text-align: left;">Order Id</th>
+            <th style="padding: 12px 15px; text-align: left;">Product Id</th>
+            <th style="padding: 12px 15px; text-align: left;">Unit Price</th>
+            <th style="padding: 12px 15px; text-align: left;">Quantity</th>
+            <th style="padding: 12px 15px; text-align: left;">Discount</th>
+            <th style="padding: 12px 15px; text-align: left;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var orderDetail in Model.OrderDetails)
+        {
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 12px 15px; font-size: 16px;">@orderDetail.OrderId</td>
+                <td style="padding: 12px 15px; font-size: 16px;">@orderDetail.ProductId</td>
+                <td style="padding: 12px 15px; font-size: 16px;">@orderDetail.UnitPrice</td>
+                <td style="padding: 12px 15px; font-size: 16px;">@orderDetail.Quantity</td>
+                <td style="padding: 12px 15px; font-size: 16px;">@orderDetail.Discount</td>
+                <td style="padding: 12px 15px; font-size: 16px;">
+                    <a asp-page="/Members/Edit" asp-route-id="@orderDetail.OrderId" style="text-decoration: none; color: #007bff; font-weight: bold;">
+                        Edit
+                    </a>
+                    <a asp-page="/Members/Delete" asp-route-id="@orderDetail.OrderId" style="text-decoration: none; color: #d9534f; font-weight: bold;">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
