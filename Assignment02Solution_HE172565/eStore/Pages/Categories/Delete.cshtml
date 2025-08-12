@@ -1,0 +1,12 @@
+﻿@page
+@model eStore.Pages.Categories.DeleteModel
+@{
+    ViewData["Title"] = "Xoá loại";
+}
+<h2>Bạn có chắc muốn xoá loại: @Model.Category?.CategoryName ?</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Xoá</button>
+    <a asp-page="Index" class="btn btn-secondary">Hủy</a>
+</form>

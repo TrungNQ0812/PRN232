@@ -1,0 +1,17 @@
+﻿@page
+@model eStore.Pages.Categories.EditModel
+@{
+    ViewData["Title"] = "Cập nhật loại";
+}
+<h2>Cập nhật loại</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label class="form-label">Tên loại</label>
+        <input asp-for="Category.CategoryName" class="form-control" />
+        <span asp-validation-for="Category.CategoryName" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+    <a asp-page="Index" class="btn btn-secondary">Quay lại</a>
+</form>

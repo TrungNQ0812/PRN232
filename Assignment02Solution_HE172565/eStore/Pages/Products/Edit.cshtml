@@ -1,0 +1,29 @@
+﻿@page
+@model eStore.Pages.Products.EditModel
+<h2>Cập nhật sản phẩm</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Product.ProductId" />
+    <div class="mb-3">
+        <label>Tên sản phẩm</label>
+        <input asp-for="Product.ProductName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Giá</label>
+        <input asp-for="Product.UnitPrice" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Tồn kho</label>
+        <input asp-for="Product.UnitsInStock" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Khối lượng</label>
+        <input asp-for="Product.Weight" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Mã loại</label>
+        <input asp-for="Product.CategoryId" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Cập nhật</button>
+    <a asp-page="Index" class="btn btn-secondary">Hủy</a>
+</form>

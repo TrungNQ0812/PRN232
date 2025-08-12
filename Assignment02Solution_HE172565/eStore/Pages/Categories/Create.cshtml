@@ -1,0 +1,16 @@
+﻿@page
+@model eStore.Pages.Categories.CreateModel
+@{
+    ViewData["Title"] = "Thêm loại sản phẩm";
+}
+<h2>Thêm loại sản phẩm</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Tên loại</label>
+        <input asp-for="Category.CategoryName" class="form-control" />
+        <span asp-validation-for="Category.CategoryName" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Lưu</button>
+    <a asp-page="Index" class="btn btn-secondary">Quay lại</a>
+</form>

@@ -1,0 +1,54 @@
+﻿@page
+@model eStore.Pages.RegisterModel
+@using BusinessObject.DTO.ApplicationUser
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="d-flex align-items-center justify-content-center" style="min-height: 65vh">
+    <div class="card shadow-lg p-4" style="width: 100%; max-width: 500px; border-radius: 1rem;">
+        <h3 class="text-center mb-4 fw-bold" style="color: DodgerBlue">📝 Tạo tài khoản</h3>
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Input.Username" class="form-label">Tên đăng nhập</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                    <input asp-for="Input.Username" class="form-control" required />
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.Email" class="form-label">Địa chỉ Email</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                    <input asp-for="Input.Email" type="email" class="form-control" required />
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.Password" class="form-label">Mật khẩu</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                    <input asp-for="Input.Password" type="password" class="form-control" required />
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.ConfirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                    <input asp-for="Input.ConfirmPassword" type="password" class="form-control" required />
+                </div>
+            </div>
+
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <p style="color:red">@Model.ErrorMessage</p>
+            }
+
+            <button type="submit" class="btn w-100 fw-bold text-white" style="background: DodgerBlue">Đăng ký</button>
+        </form>
+
+        <p class="mt-3 text-center text-dark">
+            Đã có tài khoản? <a class="fw-bold" asp-page="/Account/Login" style="color: DodgerBlue">Đăng nhập ở đây</a>
+        </p>
+    </div>
+</div>

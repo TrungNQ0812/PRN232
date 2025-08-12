@@ -1,0 +1,37 @@
+﻿@page
+@model eStore.Pages.Products.CreateModel
+@{
+    ViewData["Title"] = "Thêm sản phẩm mới";
+}
+
+<h2>Thêm sản phẩm mới</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Tên sản phẩm</label>
+        <input asp-for="Product.ProductName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Giá</label>
+        <input asp-for="Product.UnitPrice" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Tồn kho</label>
+        <input asp-for="Product.UnitsInStock" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Khối lượng</label>
+        <input asp-for="Product.Weight" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Mã loại</label>
+        <input asp-for="Product.CategoryId" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Lưu</button>
+    <a asp-page="Index" class="btn btn-secondary">Quay lại</a>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="text-danger">Đã xảy ra lỗi. Vui lòng kiểm tra lại.</div>
+}

@@ -1,0 +1,41 @@
+﻿@page
+@model MICHO_Client.Pages.Orders.CreateModel
+@{
+    ViewData["Title"] = "Place Order";
+}
+
+<h1>Place New Order</h1>
+
+<form method="post">
+    <div>
+        <label>Customer ID:</label>
+        <input asp-for="Order.CustomerId" />
+    </div>
+    <div>
+        <label>Employee ID:</label>
+        <input asp-for="Order.EmpId" />
+    </div>
+
+    <h4>Select Ice Cream</h4>
+    @for (int i = 0; i < 3; i++) 
+    {
+        <div>
+            <label>Ice Cream:</label>
+            <select asp-for="Order.Items[@i].IceID">
+                <option value="">--Select--</option>
+                @foreach (var ice in Model.IceCreams)
+                {
+                    <option value="@ice.IceId">@ice.Name</option>
+                }
+            </select>
+
+            <label>Quantity:</label>
+            <input type="number" asp-for="Order.Items[@i].Quantity" min="1" />
+
+            <label>Price:</label>
+            <input type="number" asp-for="Order.Items[@i].Price" step="0.01" />
+        </div>
+    }
+
+    <button type="submit">Submit Order</button>
+</form>

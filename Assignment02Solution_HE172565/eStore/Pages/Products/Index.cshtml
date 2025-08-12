@@ -1,0 +1,30 @@
+﻿@page
+@model eStore.Pages.Products.IndexModel
+<h2>Danh sách sản phẩm</h2>
+
+<a asp-page="Create" class="btn btn-primary mb-2">➕ Thêm sản phẩm</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Tồn kho</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.UnitsInStock</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@item.ProductId" class="btn btn-warning">✏️</a>
+                    <a asp-page="Delete" asp-route-id="@item.ProductId" class="btn btn-danger">🗑️</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
